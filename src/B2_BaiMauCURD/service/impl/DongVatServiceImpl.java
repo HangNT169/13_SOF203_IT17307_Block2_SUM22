@@ -14,7 +14,7 @@ import java.util.List;
  * @author hangnt
  */
 public class DongVatServiceImpl implements DongVatService {
-    
+
     @Override
     public List<DongVat> searchByName(List<DongVat> lists, String name) {
         List<DongVat> listSearch = new ArrayList<>();
@@ -31,8 +31,9 @@ public class DongVatServiceImpl implements DongVatService {
     @Override
     public void sortByName(List<DongVat> lists) {
         lists.sort((o1, o2) -> {
-            return o1.getTenDV().compareTo(o2.getTenDV()); 
+//           return o1.getTenDV().compareTo(o2.getTenDV());
+            return o1.getCanNang() - o2.getCanNang();
         });
     }
-    
+
 }
