@@ -82,4 +82,7 @@ public class GiangVien {
         return "GiangVien{" + "maGV=" + maGV + ", tenGV=" + tenGV + ", tuoi=" + tuoi + ", bac=" + bac + ", loai=" + loai + ", gioiTinh=" + gioiTinh + '}';
     }
 
+    public Object[] toDataRow() {
+        return new Object[]{maGV, tenGV, tuoi, bac, loai, gioiTinh == true ? "Nam" : "Nu"};
+    }
 }
